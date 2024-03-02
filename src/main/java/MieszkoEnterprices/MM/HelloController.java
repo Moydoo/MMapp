@@ -12,8 +12,8 @@ public class HelloController {
     }
 
     @GetMapping("/home")
-    public String home() {
-        return "Ja wyciskajacy z kumplem na klate. Ludzie w publicznej toalecie :o ~Mati byl zniesmaczony";
+    public String home(@RequestParam String input) {
+        return "What I mean is: " + input;
     }
 
     @GetMapping("/sum")
