@@ -13,7 +13,7 @@ public class HelloController {
 
     @GetMapping("/home")
     public String home() {
-        return "Ja wyciskajacy z kumplem na klate. Ludzie w publicznej toalecie :o ~Mati był zniesmaczony";
+        return "Ja wyciskajacy z kumplem na klate. Ludzie w publicznej toalecie :o ~Mati byl zniesmaczony";
     }
 
     @GetMapping("/sum")
