@@ -22,8 +22,10 @@ public class MmApplication {
 
 			String[] beanNames = ctx.getBeanDefinitionNames();
 			Arrays.sort(beanNames);
+			int i=0;
 			for(String beanName: beanNames) {
-				System.out.println(beanName);
+				System.out.println(i + ": " + beanName);
+				i++;
 			}
 			};
 		}

@@ -9,4 +9,9 @@ public class HelloController {
     public String index() {
         return "Greetings from Spring Boot!";
     }
+
+    @GetMapping("/home")
+    public String home() {
+        return "Ja wyciskajacy z kumplem na klate. Ludzie w publicznej toalecie :o";
+    }
 }
