@@ -20,4 +20,6 @@ public class HelloController {
     public String sum(@RequestParam int a, @RequestParam int b) {
         return "The sum is: " + (a + b);
     }
+
+
 }
