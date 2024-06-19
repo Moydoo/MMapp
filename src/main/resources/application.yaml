@@ -1,0 +1,40 @@
+#spring.application.name=mm
+#
+#spring.datasource.url=jdbc:mysql://localhost/dev
+#spring.datasource.username=root
+#spring.datasource.password=root
+#spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+#
+#spring.jpa.hibernate.ddl-auto=validate
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+#
+#spring.liquibase.enabled=true
+#spring.liquibase.change-log=classpath:db/db-changelog-master.json
+#
+#logging.level.org.springframework=DEBUG
+#logging.level.liquibase=info
+
+
+spring:
+  application:
+    name: mm
+  datasource:
+    url: jdbc:mysql://localhost/dev
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db-changelog-master.json
+logging:
+  level:
+    org:
+      springframework: DEBUG
+    liquibase: info

@@ -1,0 +1,114 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "1",
+        "author": "Mati",
+        "changes": [
+          {
+            "createTable": {
+              "tableName": "POST",
+              "columns": [
+                {
+                  "column": {
+                    "autoIncrement": true,
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true,
+                      "primaryKeyName": "PK_POST"
+                    },
+                    "name": "ID",
+                    "type": "BIGINT"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "TITLE",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "BODY",
+                    "type": "VARCHAR(1000)"
+                  }
+                },
+                {
+                  "column": {
+                    "constraints": {
+                      "nullable": false
+                    },
+                    "name": "AUTHOR_ID",
+                    "type": "BIGINT"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "2",
+        "author": "Mati",
+        "changes": [
+          {
+            "createTable": {
+              "tableName": "USER",
+              "columns": [
+                {
+                  "column": {
+                    "autoIncrement": true,
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true,
+                      "primaryKeyName": "PK_USER"
+                    },
+                    "name": "ID",
+                    "type": "BIGINT"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "FIRST_NAME",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "LAST_NAME",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "DATE_OF_BIRTH",
+                    "type": "DATE"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "3",
+        "author": "Mati",
+        "changes": [
+          {
+            "addForeignKeyConstraint": {
+              "baseColumnNames": "AUTHOR_ID",
+              "baseTableName": "POST",
+              "constraintName": "FK_POST_ON_AUTHOR",
+              "referencedColumnNames": "ID",
+              "referencedTableName": "USER"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
